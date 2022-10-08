@@ -14,6 +14,8 @@
 		3047E30328F10F260058EF9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3047E30228F10F260058EF9C /* Assets.xcassets */; };
 		3047E30628F10F260058EF9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3047E30428F10F260058EF9C /* LaunchScreen.storyboard */; };
 		3047E30928F10F260058EF9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3047E30828F10F260058EF9C /* main.m */; };
+		3047E31228F1100C0058EF9C /* NFCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3047E31128F1100C0058EF9C /* NFCManager.m */; };
+		3047E31528F14D110058EF9C /* NFCTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3047E31428F14D110058EF9C /* NFCTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,11 @@
 		3047E30528F10F260058EF9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3047E30728F10F260058EF9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3047E30828F10F260058EF9C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3047E30F28F10F5F0058EF9C /* NFCDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NFCDemo.entitlements; sourceTree = "<group>"; };
+		3047E31028F1100C0058EF9C /* NFCManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NFCManager.h; sourceTree = "<group>"; };
+		3047E31128F1100C0058EF9C /* NFCManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NFCManager.m; sourceTree = "<group>"; };
+		3047E31328F14D110058EF9C /* NFCTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NFCTools.h; sourceTree = "<group>"; };
+		3047E31428F14D110058EF9C /* NFCTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NFCTools.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +68,7 @@
 		3047E2F528F10F230058EF9C /* NFCDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3047E30F28F10F5F0058EF9C /* NFCDemo.entitlements */,
 				3047E2F628F10F230058EF9C /* AppDelegate.h */,
 				3047E2F728F10F230058EF9C /* AppDelegate.m */,
 				3047E2F928F10F230058EF9C /* SceneDelegate.h */,
@@ -72,6 +80,10 @@
 				3047E30428F10F260058EF9C /* LaunchScreen.storyboard */,
 				3047E30728F10F260058EF9C /* Info.plist */,
 				3047E30828F10F260058EF9C /* main.m */,
+				3047E31028F1100C0058EF9C /* NFCManager.h */,
+				3047E31128F1100C0058EF9C /* NFCManager.m */,
+				3047E31328F14D110058EF9C /* NFCTools.h */,
+				3047E31428F14D110058EF9C /* NFCTools.m */,
 			);
 			path = NFCDemo;
 			sourceTree = "<group>";
@@ -148,6 +160,8 @@
 			files = (
 				3047E2FE28F10F230058EF9C /* ViewController.m in Sources */,
 				3047E2F828F10F230058EF9C /* AppDelegate.m in Sources */,
+				3047E31228F1100C0058EF9C /* NFCManager.m in Sources */,
+				3047E31528F14D110058EF9C /* NFCTools.m in Sources */,
 				3047E30928F10F260058EF9C /* main.m in Sources */,
 				3047E2FB28F10F230058EF9C /* SceneDelegate.m in Sources */,
 			);
@@ -290,16 +304,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NFCDemo/NFCDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MBB6RBH9JT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NFCDemo/Info.plist;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "需要访问NFC权限APP才能正常使用";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,8 +323,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zcsmart.NFCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,16 +336,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NFCDemo/NFCDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MBB6RBH9JT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NFCDemo/Info.plist;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "需要访问NFC权限APP才能正常使用";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,8 +355,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zcsmart.NFCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
