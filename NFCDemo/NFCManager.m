@@ -77,7 +77,7 @@ API_AVAILABLE(ios(13.0))
     if (@available(iOS 13.0, *)) {
         self.tagReaderSession = [[NFCTagReaderSession alloc]
                         
-                        initWithPollingOption:(NFCPollingISO14443 | NFCPollingISO15693 | NFCPollingISO15693) delegate:self queue:nil];
+                        initWithPollingOption:(NFCPollingISO14443 | NFCPollingISO15693 | NFCPollingISO18092) delegate:self queue:nil];
         self.tagReaderSession.alertMessage = @"准备扫描，请将卡片贴近手机";
         [self.tagReaderSession beginSession];
     }

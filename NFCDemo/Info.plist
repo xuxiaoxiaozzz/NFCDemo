@@ -21,5 +21,44 @@
 			</array>
 		</dict>
 	</dict>
+    
+    
+    
+    <key>NFCReaderUsageDescription</key>
+    <string>This app uses NFC to scan for fish tags</string>
+    
+    <key>com.apple.developer.nfc.readersession.felica.systemcodes</key>
+    <array>
+        <string>12FC</string>
+    </array>
+    <key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+    <array>
+        <string>D2760000850101</string>
+        <string>D2760000850100</string>
+        <string>A000000243001300000001FF</string>
+        <string>A0000002430013000000010109</string>
+        <string>A00000024300130000000101</string>
+        <string>00000000000000</string>
+        
+        <string>A0000002472001</string>
+
+        
+        <string>A000000003101001</string>
+        <string>A000000003101002</string>
+        <string>A0000000041010</string>
+        <string>A0000000042010</string>
+        <string>A0000000044010</string>
+        
+        <!--   身份证白名单     -->
+                <string>F049442E43484E</string>
+                <string>A0000002471001</string>
+        
+    </array>
+    
+    
+    
+    
+    
+    
 </dict>
 </plist>
