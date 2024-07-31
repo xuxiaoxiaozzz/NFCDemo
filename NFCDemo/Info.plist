@@ -2,6 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -24,41 +25,101 @@
     
     
     
-    <key>NFCReaderUsageDescription</key>
-    <string>This app uses NFC to scan for fish tags</string>
-    
-    <key>com.apple.developer.nfc.readersession.felica.systemcodes</key>
+    <key>com.apple.developer.nfc.hce</key>
+    <true/>
+    <key>com.apple.developer.nfc.hce.default-contactless-app</key>
+    <true/>
+    <key>com.apple.developer.nfc.hce.iso7816.select-identifier-prefixes</key>
     <array>
-        <string>12FC</string>
+        <string>A0000003964D344D24040181F8020001</string>
     </array>
-    <key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
-    <array>
-        <string>D2760000850101</string>
-        <string>D2760000850100</string>
-        <string>A000000243001300000001FF</string>
-        <string>A0000002430013000000010109</string>
-        <string>A00000024300130000000101</string>
-        <string>00000000000000</string>
-        
-        <string>A0000002472001</string>
+    
+    
+    
+    
+	<key>NFCReaderUsageDescription</key>
+	<string>This app uses NFC to scan for fish tags</string>
+	<key>com.apple.developer.nfc.readersession.felica.systemcodes</key>
+	<array>
+		<string>12FC</string>
+	</array>
 
+    
+    
+	<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+	<array>
+        <string>A0000003964D344D24040181F8020001</string>
+		<string>D2760000850101</string>
+		<string>D2760000850100</string>
+		<string>A000000243001300000001FF</string>
+		<string>A0000002430013000000010109</string>
+		<string>A00000024300130000000101</string>
+		<string>00000000000000</string>
+		<string>A0000002472001</string>
+		<string>A000000003101001</string>
+		<string>A000000003101002</string>
+		<string>A0000000041010</string>
+		<string>A0000000042010</string>
+		<string>A0000000044010</string>
+		<string>F049442E43484E</string>
+		<string>A0000002471001</string>
         
-        <string>A000000003101001</string>
-        <string>A000000003101002</string>
+        <string>A0000000011010</string>
+        <string>A0000000031010</string>
+        <string>A0000000032010</string>
+        <string>A0000000032020</string>
+        <string>A0000000038010</string>
         <string>A0000000041010</string>
-        <string>A0000000042010</string>
-        <string>A0000000044010</string>
+        <string>A0000000049999</string>
         
-        <!--   身份证白名单     -->
-                <string>F049442E43484E</string>
-                <string>A0000002471001</string>
+        <string>A0000000043060</string>
+        <string>A0000000046000</string>
+        <string>A0000000050001</string>
+        <string>A00000002501</string>
+        <string>A0000000291010</string>
         
-    </array>
-    
-    
-    
-    
-    
-    
+        <string>A0000000421010</string>
+        <string>A0000000422010</string>
+        <string>A0000000651010</string>
+        <string>A0000001211010</string>
+        <string>A0000001214711</string>
+        
+        <string>A0000001410001</string>
+        <string>A0000001523010</string>
+        <string>A0000001544442</string>
+        <string>A00000022820101010</string>
+        <string>A0000002771010</string>
+        
+        <string>A0000003241010</string>
+        <string>A000000333010101</string>
+        <string>A000000333010102</string>
+        <string>A000000333010103</string>
+        <string>A000000333010106</string>
+        
+        <string>A0000003591010028001</string>
+        <string>A00000035910100380</string>
+        <string>A0000003710001</string>
+        <string>A0000004391010</string>
+        <string>A0000005241010</string>
+        
+        <string>A0000006582010</string>
+        <string>A0000006581010</string>
+        <string>A0000004360100</string>
+        <string>A00000038410</string>
+        <string>A00000038420</string>
+        
+        <string>A000000337301000</string>
+        <string>A000000337101000</string>
+        <string>A000000337102000</string>
+        <string>A000000337101001</string>
+        <string>A000000337102001</string>
+        
+        <string>A000000337601001</string>
+        
+        
+        
+        
+        
+	</array>
 </dict>
 </plist>
